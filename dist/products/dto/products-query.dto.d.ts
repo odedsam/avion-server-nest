@@ -14,4 +14,5 @@ export declare class ProductsQueryDto {
     colors?: string[];
     brands?: string[];
     materials?: string[];
+    tags?: string[];
 }

@@ -1,99 +1,229 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# avion-server-nest
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Overview
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+- Repository: `avion-server-nest`
+- Category: `backend`
+- Runtime: `Node.js`
+- Primary framework: `NestJS`
+- Rendering or execution model: `Server-rendered API/runtime backend`
+- Package manager metadata: `pnpm@10.10.0`
+- Root directories discovered: `4`
+- Root files discovered: `12`
+- Declared runtime dependencies: `17`
+- Declared development dependencies: `22`
+- Declared scripts: `13`
 
-## Description
+## Repository Summary
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- `avion-server-nest` is documented from the files present in this repository only.
+- This README intentionally avoids assumptions when implementation details are not explicit.
+- Paths, dependencies, scripts, and configuration notes below are derived from the current repository tree.
+- Unknown or partially confirmed areas are called out explicitly instead of being filled with guesses.
 
-## Project setup
+## Script Reference
 
-```bash
-$ yarn install
-```
+- `clean`: `rimraf ./dist`
+- `build`: `pnpm run clean && nest build`
+- `format`: `prettier --write "src/**/*.ts" "test/**/*.ts"`
+- `start`: `nest start`
+- `dev`: `nest start --watch`
+- `start:debug`: `nest start --debug --watch`
+- `start:prod`: `node dist/main.js`
+- `lint`: `eslint "{src,apps,libs,test}/**/*.ts" --fix`
+- `test`: `jest`
+- `test:watch`: `jest --watch`
+- `test:cov`: `jest --coverage`
+- `test:debug`: `node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand`
+- `test:e2e`: `jest --config ./test/jest-e2e.json`
 
-## Compile and run the project
+## Top-Level Directories
 
-```bash
-# development
-$ yarn run start
+- `.github/`
+- `dist/`
+- `docs/`
+- `src/`
 
-# watch mode
-$ yarn run start:dev
+## Top-Level Files
 
-# production mode
-$ yarn run start:prod
-```
+- `.eslintrc.js`
+- `.gitignore`
+- `.prettierrc`
+- `DOCS.md`
+- `README.md`
+- `nest-cli.json`
+- `package.json`
+- `pnpm-lock.yaml`
+- `pnpm-workspace.yaml`
+- `render.yaml`
+- `tsconfig.build.json`
+- `tsconfig.json`
 
-## Run tests
+## Runtime Dependencies
 
-```bash
-# unit tests
-$ yarn run test
+- `@nestjs/common`
+- `@nestjs/config`
+- `@nestjs/core`
+- `@nestjs/jwt`
+- `@nestjs/mongoose`
+- `@nestjs/platform-express`
+- `@nestjs/serve-static`
+- `@nestjs/swagger`
+- `bcryptjs`
+- `class-transformer`
+- `class-validator`
+- `clean`
+- `cloudinary`
+- `mongoose`
+- `reflect-metadata`
+- `rxjs`
+- `swagger-ui-express`
 
-# e2e tests
-$ yarn run test:e2e
+## Development Dependencies
 
-# test coverage
-$ yarn run test:cov
-```
+- `@nestjs/cli`
+- `@nestjs/schematics`
+- `@nestjs/testing`
+- `@types/express`
+- `@types/jest`
+- `@types/node`
+- `@types/supertest`
+- `@typescript-eslint/eslint-plugin`
+- `@typescript-eslint/parser`
+- `eslint`
+- `eslint-config-prettier`
+- `eslint-plugin-prettier`
+- `jest`
+- `prettier`
+- `rimraf`
+- `source-map-support`
+- `supertest`
+- `ts-jest`
+- `ts-loader`
+- `ts-node`
+- `tsconfig-paths`
+- `typescript`
 
-## Deployment
+## Environment Variable References
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+- `NODE_ENV`
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+## Integration Notes
 
-```bash
-$ yarn install -g mau
-$ mau deploy
-```
+- Mongoose is declared
+- Nest Mongoose integration is declared
+- bcryptjs is declared for password hashing
+- Render deployment configuration file is present
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+## Authentication Notes
 
-## Resources
+- JWT-related dependencies are present
+- Password hashing dependency bcryptjs is present
+- Repository contains auth-related source files or routes
 
-Check out a few resources that may come in handy when working with NestJS:
+## Database And Storage Notes
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+- Mongoose-backed MongoDB access is present
 
-## Support
+## Primary Source Areas
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- `src/` is present
 
-## Stay in touch
+## Route And Entry Inventory
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- No route or entry files were categorized
 
-## License
+## Service And Data Inventory
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+- `src/products/entities/product.entity.ts`
+- `src/products/schemas/product.schema.ts`
+- `src/schemas/user.schema.ts`
+
+## State, Hook, Or Provider Inventory
+
+- No state or hook files were categorized
+
+## UI, Module, Or Feature Inventory
+
+- No UI or module files were categorized
+
+## Config, Schema, And Tooling Inventory
+
+- `src/auth/dto/login-dto.ts`
+- `src/auth/dto/sign-up.dto.ts`
+- `src/products/dto/products-query.dto.ts`
+- `src/products/dto/products.dto.ts`
+- `src/user/dto/create-user.dto.ts`
+
+## Tests And Verification Inventory
+
+- `src/user/user.controller.spec.ts`
+- `src/user/user.service.spec.ts`
+
+## Development Workflow Notes
+
+- Install path should be checked against package manager metadata before local development: `pnpm@10.10.0`.
+- Build, dev, lint, format, and test tasks are listed exactly as declared in `package.json` when present.
+- No dependency installation or build execution was performed for this documentation pass.
+- Script `dev` is available and may be relevant for local workflow review.
+- Script `build` is available and may be relevant for local workflow review.
+- Script `start` is available and may be relevant for local workflow review.
+- Script `test` is available and may be relevant for local workflow review.
+- Script `lint` is available and may be relevant for local workflow review.
+- Script `format` is available and may be relevant for local workflow review.
+
+## Known Unknowns
+
+- No explicit route or entry inventory could be categorized from the scanned source files
+
+## Additional Source Inventory
+
+- `.eslintrc.js`
+- `.github/dependabot.yml`
+- `.prettierrc`
+- `nest-cli.json`
+- `package.json`
+- `pnpm-lock.yaml`
+- `pnpm-workspace.yaml`
+- `render.yaml`
+- `src/admin/admin.controller.ts`
+- `src/admin/admin.module.ts`
+- `src/admin/admin.repository.ts`
+- `src/admin/admin.service.ts`
+- `src/app.controller.ts`
+- `src/app.module.ts`
+- `src/app.service.ts`
+- `src/auth/auth.controller.ts`
+- `src/auth/auth.module.ts`
+- `src/auth/auth.service.ts`
+- `src/auth/dto/login-dto.ts`
+- `src/auth/dto/sign-up.dto.ts`
+- `src/common/middelware/logger.middelware.ts`
+- `src/main.ts`
+- `src/products/dto/products-query.dto.ts`
+- `src/products/dto/products.dto.ts`
+- `src/products/entities/product.entity.ts`
+- `src/products/mappers/product.mapper.ts`
+- `src/products/products.controller.ts`
+- `src/products/products.module.ts`
+- `src/products/products.repository.ts`
+- `src/products/products.service.ts`
+- `src/products/schemas/product.schema.ts`
+- `src/schemas/user.schema.ts`
+- `src/scripts/remove-number-id.ts`
+- `src/types/index.ts`
+- `src/user/dto/create-user.dto.ts`
+- `src/user/user.controller.spec.ts`
+- `src/user/user.controller.ts`
+- `src/user/user.module.ts`
+- `src/user/user.service.spec.ts`
+- `src/user/user.service.ts`
+- `src/utils/config.ts`
+- `src/utils/filter.ts`
+- `src/utils/imageMigration.ts`
+- `src/utils/index.ts`
+- `src/utils/log.ts`
+- `src/utils/sort.ts`
+- `src/utils/swaggerDecorators.ts`
+- `tsconfig.build.json`
+- `tsconfig.json`

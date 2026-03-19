@@ -65,4 +65,10 @@ export class ProductsQueryDto {
   @IsArray()
   @IsString({ each: true })
   materials?: string[];
+
+  @IsOptional()
+  @Transform(({ value }) => (Array.isArray(value) ? value : [value]))
+  @IsArray()
+  @IsString({ each: true })
+  tags?: string[];
 }

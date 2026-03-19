@@ -14,7 +14,7 @@ export class ProductsService {
   ) {}
 
   async getFilteredProducts(query: ProductsQueryDto) {
-    const { category, sort, limit, offset, colors, brands, materials, ...otherFilters } = query;
+    const { category, sort, limit, offset, colors, brands, materials, priceRanges, tags, ...otherFilters } = query;
 
     const findQuery: any = {};
 
@@ -32,6 +32,39 @@ export class ProductsService {
 
     if (materials?.length) {
       findQuery.material = { $in: materials };
+    }
+
+    if (tags?.length) {
+      findQuery.tags = { $in: tags };
+    }
+
+    if (priceRanges?.length) {
+      const priceConditions = priceRanges
+        .map((range) => {
+          if (range === '400+') {
+            return { productPrice: { $gte: 400 } };
+          }
+
+          const [minRaw, maxRaw] = range.split('-');
+          const min = Number(minRaw);
+          const max = Number(maxRaw);
+
+          if (Number.isNaN(min) || Number.isNaN(max)) {
+            return null;
+          }
+
+          return {
+            productPrice: {
+              $gte: min,
+              $lte: max,
+            },
+          };
+        })
+        .filter(Boolean);
+
+      if (priceConditions.length) {
+        findQuery.$or = priceConditions;
+      }
     }
 
     for (const key in otherFilters) {
