@@ -7,7 +7,7 @@ services:
     buildCommand: |
       pnpm install --frozen-lockfile
       pnpm build
-    startCommand: pnpm start
+    startCommand: pnpm run start:prod
     envVars:
       - key: NODE_ENV
         value: production
